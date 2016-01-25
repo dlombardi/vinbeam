@@ -27,3 +27,23 @@
   </div>
   <img id="car_banner" src="../../assets/images/car_divider.jpg" alt="">
 </section>
+<section id="how">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-12 info-header">
+        <h1>HOW IT WORKS</h1>
+        <h3>3 Components. Easy to install. Simple to use.</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center blurb" ng-repeat="step in steps track by $index">
+        <img src="{{step.image}}">
+        <h3>{{step.title}}</h3>
+        <hr/>
+        <ul class="text-left">
+          <li ng-repeat="bullet in step.bullets">{{bullet}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

@@ -33,6 +33,40 @@ app.controller('MainController', ['$scope', '$window', '$timeout', '$document', 
     }
   ];
 
+  $scope.steps = [
+    {
+      title: "The Module",
+      image: '../../assets/images/module.png',
+      bullets: [
+        "Plugs into ODB-II Port in the vehicle",
+        "Near Zero battery use",
+        "Reports Location & Statistics",
+        "Proprietary Network - all vehicles work together",
+        "Communicate to the Gateway"
+      ]
+    },
+    {
+      title: "The Gateway",
+      image: '../../assets/images/router.png',
+      bullets: [
+        "Secure wireless router in dealership",
+        "Brain of the proprietary network",
+        "Reports vehicle data to Cloud Backend",
+        "Range over 300 yards from nearest vehicle"
+      ]
+    },
+    {
+      title: "Vehicle Data Access",
+      image: '../../assets/images/cloud_storage.png',
+      bullets: [
+        "Access from any web browswer",
+        "Admin controls for Users and data",
+        "Data stores of ALL data from vehicles",
+        "Sortable reports on vehicle location and data"
+      ]
+    },
+  ];
+
   $scope.$on('goToSection', (err, section) => {
     let element = angular.element(document.getElementById(section));
     $document.scrollToElement(element, 0, 1000);
