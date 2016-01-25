@@ -1,7 +1,6 @@
 'use strict';
 
-app.controller('MainController', ['$scope', '$window', '$timeout' , function($scope, $window, $timeout){
-
+app.controller('MainController', ['$scope', '$window', '$timeout', '$document', ($scope, $window, $timeout, $document) => {
   $scope.blurbs = [
     {
       title: "Inventory Management",
@@ -34,7 +33,10 @@ app.controller('MainController', ['$scope', '$window', '$timeout' , function($sc
     }
   ];
 
-
+  $scope.$on('goToSection', (err, section) => {
+    let element = angular.element(document.getElementById(section));
+    $document.scrollToElement(element, 0, 1000);
+  });
 
   $scope.$emit("inMain");
 }])

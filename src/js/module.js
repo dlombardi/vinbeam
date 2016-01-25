@@ -1,14 +1,12 @@
 'use strict';
 
-let app = angular.module('vinbeam', ['ui.router', 'ngAnimate', 'ui.bootstrap']);
+let app = angular.module('vinbeam', ['ui.router', 'ngAnimate', 'ui.bootstrap', 'duScroll']);
 
 app.run(($rootScope, $state) => {
-  $rootScope.$on('notMain', () => {
-      $rootScope.$broadcast("notInMain");
-  });
-  $rootScope.$on('inMain', () => {
-      $rootScope.$broadcast("insideMain");
-  });
+  $rootScope.$on('notMain', () => $rootScope.$broadcast("notInMain"));
+  $rootScope.$on('inMain', () => $rootScope.$broadcast("insideMain"));
+
+  $rootScope.$on('toSection', (err, section) => $rootScope.$broadcast('goToSection', section));
 });
 
 app.config(["$stateProvider", "$locationProvider", "$urlRouterProvider", ($stateProvider, $locationProvider, $urlRouterProvider) => {

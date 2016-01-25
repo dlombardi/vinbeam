@@ -9,15 +9,15 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" ui-sref="main">VINBeam</a>
+        <a class="navbar-brand" ng-click="scrollTo($event)" ui-sref="main">VINBeam</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav nav-links nav-left">
-          <li><a ng-hide="!main" class="nav-scroll" href="#" ng-click="scrollToWhat()">What</a></li>
-          <li><a ng-hide="!main" class="nav-scroll" href="#" ng-click="scrollToHow()">How</a></li>
-          <li><a ng-hide="!main" class="nav-scroll" href="#" ng-click="scrollToWhy()">Why</a></li>
+          <li><a ng-hide="!main" class="nav-scroll" href="#" ng-click="scrollTo($event)">What</a></li>
+          <li><a ng-hide="!main" class="nav-scroll" href="#" ng-click="scrollTo($event)">How</a></li>
+          <li><a ng-hide="!main" class="nav-scroll" href="#" ng-click="scrollTo($event)">Why</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right nav-links">
           <li><a class="nav-page divider-left" ui-sref="about" ui-sref-active="active">About Us</a></li>
