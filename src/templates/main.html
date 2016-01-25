@@ -1,0 +1,29 @@
+<section id="banner">
+  <div class="jumbotron">
+    <div class="container">
+
+    </div>
+  </div>
+</section>
+<section id="info">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-12 info-header">
+        <h1>WHAT IT DOES</h1>
+        <h3>Your Inventory working for you!</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 text-center blurb" ng-repeat="blurb in blurbs track by $index">
+        <img src="{{blurb.image}}">
+        <h3>{{blurb.title}}</h3>
+        <hr/>
+        <p >{{blurb.description}}</p>
+        <ul class="text-left">
+          <li ng-repeat="bullet in blurb.bullets">{{bullet}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <img id="car_banner" src="../../assets/images/car_divider.jpg" alt="">
+</section>

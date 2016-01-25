@@ -1,0 +1,73 @@
+.navbar-custom{
+  background-color: $primary-color;
+  @include box-shadow-small($box-shadow-grey)
+  border-bottom: 4px solid $primary-medium;
+
+  .navbar-brand{
+    color: white;
+    font-size: 40px;
+  }
+
+  .nav-links{
+    li a {
+      color: $vinbeam-grey;
+      position: relative;
+      background-color: $primary-color;
+      font-family: $open_sans;
+    }
+    li a:hover{
+      color: white;
+    }
+    li a:active{
+      color: yellow;
+    }
+    .nav-scroll{
+      margin-left: 20px;
+      font-size: 15px;
+    }
+    .divider-right{
+      border-right: 2px solid $vinbeam-grey;
+      padding-right: 20px;
+    }
+    .divider-left{
+      border-left: 2px solid $vinbeam-grey;
+      padding-right: 20px;
+    }
+    .nav-page{
+      background-color: $primary-color;
+      border: none;
+      font: 15px;
+    }
+  }
+  @media (max-width: 766px){
+    .nav-links {
+      .divider-vertical{
+        border: none;
+        border-top: 1px dotted white;
+      }
+      .nav-scroll {
+        border: none;
+        margin-left: 0px;
+        border-bottom: 1px dotted white;
+      }
+      .nav-page{
+        border: none;
+        border-left: 2px solid $vinbeam-grey;
+      }
+      li a:hover{
+        background-color: white;
+        color: grey;
+        @extend .noAnimation;
+      }
+      li a:active{
+        background-color: white;
+        color: yellow;
+        @extend .noAnimation;
+      }
+    }
+  }
+}
+
+.active{
+  background-color: $primary-color;
+}
