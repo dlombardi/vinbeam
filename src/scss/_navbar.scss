@@ -1,18 +1,27 @@
 .navbar-custom{
-  background-color: $primary-color;
+  background-color: $primary-dark;
   @include box-shadow-small($box-shadow-grey)
   border-bottom: 4px solid $primary-medium;
+
+
 
   .navbar-brand{
     color: white;
     font-size: 40px;
   }
 
+  button.navbar-toggle{
+    background-color: $primary-color;
+    span.icon-bar{
+      background-color: white;
+    }
+  }
+
   .nav-links{
     li a {
       color: $vinbeam-grey;
       position: relative;
-      background-color: $primary-color;
+      background-color: $primary-dark;
       font-family: $open_sans;
     }
     li a:hover{
@@ -34,21 +43,17 @@
       padding-right: 20px;
     }
     .nav-page{
-      background-color: $primary-color;
+      background-color: $primary-dark;
       border: none;
       font: 15px;
     }
   }
   @media (max-width: 766px){
     .nav-links {
-      .divider-vertical{
-        border: none;
-        border-top: 1px dotted white;
-      }
       .nav-scroll {
         border: none;
         margin-left: 0px;
-        border-bottom: 1px dotted white;
+        border-bottom: 1px solid white;
       }
       .nav-page{
         border: none;

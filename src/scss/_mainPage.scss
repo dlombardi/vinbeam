@@ -1,19 +1,79 @@
 .jumbotron{
-  position: relative;
-  display: block;
-  background: url("../../assets/images/Slide1.png") center center;
+  background: url("../../assets/images/banner.jpg") center, center;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  height: 650px;
+  height: 800px;
   overflow: hidden;
-  margin-top: 53px;
 }
-.info-header{
+
+.blurb{
+  margin-bottom: 20px;
+  p{
+    font-size: 18px;
+  }
+}
+
+#car_banner{
+  width: 100%;
+  z-index: 1;
+}
+
+#what{
+  position: relative;
+  background-color: white;
+  padding-top: 100px;
+  z-index: 10;
+}
+
+#how{
+  position: relative;
+  margin-top: 0px;
+  padding-top: 100px;
+  padding-bottom: 200px;
+  background-color: #2288DA;
+  z-index: 10;
+  h3{
+    color: white;
+  }
+  ul{
+    background-color: $vinbeam-green;
+    @include box-shadow-small(black);
+    color: white;
+  }
+}
+
+#why{
+  background-image: url('../../assets/images/tire_background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  color: white;
+  z-index: 1
+  ul{
+    @include box-shadow-small(black);
+    color: white;
+  }
+}
+
+.bullets{
+  border-radius: 5px;
+  background-color: $vinbeam-green;
+  margin-top: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  font-size: 15px;
+  color: white;
+  @include box-shadow-small($box-shadow-grey)
+}
+
+.what-header{
   padding: 2em;
   margin-bottom: 1em;
   h1{
-    font-size: 50px;
+    font-size: 60px;
     color: $primary-color;
   }
   h3{
@@ -22,11 +82,46 @@
   }
 }
 
-.blurb{
-  padding: 20px;
-  margin-bottom: 20px;
+.how-header{
+  padding: 2em;
+  margin-bottom: 1em;
+  h1{
+    font-size: 60px;
+    color: white;
+  }
+  h3{
+    margin-top: -10px;
+    margin-left: 5px;
+  }
 }
 
-#car_banner{
+.why-header{
+  padding: 2em;
+  margin-bottom: 1em;
+  h1{
+    font-size: 60px;
+    color: $primary-color;
+  }
+  h3{
+    margin-top: -10px;
+    margin-left: 5px;
+  }
+}
+
+#footer{
+  height: 100px;
   width: 100%;
+  border-top: 10px solid $primary-medium;
+  background-color: $primary-dark;
+}
+
+.arrow-down {
+	width: 0px;
+	height: 0px;
+  margin: auto;
+  margin-top: -100px;
+	border-left: 60px solid transparent;
+	border-right: 60px solid transparent;
+	border-top: 60px solid #2288DA;
+  z-index: 10;
 }

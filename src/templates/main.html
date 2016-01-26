@@ -5,32 +5,32 @@
     </div>
   </div>
 </section>
-<section id="what">
+<section id="what" class="big-triangle">
   <div class="container">
     <div class="row text-center">
-      <div class="col-md-12 info-header">
+      <div class="col-md-12 what-header">
         <h1>WHAT IT DOES</h1>
         <h3>Your Inventory working for you!</h3>
       </div>
     </div>
-    <div class="row">
+    <div class="row ">
       <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 text-center blurb" ng-repeat="blurb in blurbs track by $index">
         <img src="{{blurb.image}}">
         <h3>{{blurb.title}}</h3>
         <hr/>
         <p >{{blurb.description}}</p>
-        <ul class="text-left">
+        <ul class="text-left bullets">
           <li ng-repeat="bullet in blurb.bullets">{{bullet}}</li>
         </ul>
       </div>
     </div>
   </div>
-  <img id="car_banner" src="../../assets/images/car_divider.jpg" alt="">
+  <img id="car_banner" src="../../assets/images/car_divider.png" alt="">
 </section>
 <section id="how">
   <div class="container">
     <div class="row text-center">
-      <div class="col-md-12 info-header">
+      <div class="col-md-12 how-header">
         <h1>HOW IT WORKS</h1>
         <h3>3 Components. Easy to install. Simple to use.</h3>
       </div>
@@ -40,10 +40,46 @@
         <img src="{{step.image}}">
         <h3>{{step.title}}</h3>
         <hr/>
-        <ul class="text-left">
+        <ul class="text-left bullets">
           <li ng-repeat="bullet in step.bullets">{{bullet}}</li>
         </ul>
       </div>
     </div>
+  </div>
+</section>
+<section id="why">
+  <div class="arrow-down"></div>
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-12 why-header">
+        <h1>THE BENEFITS</h1>
+        <h3>Your vehicle now works for you!</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 text-center blurb" ng-repeat="benefit in benefitRowOne track by $index">
+        <img src="{{benefit.image}}">
+        <h3>{{benefit.title}}</h3>
+        <hr/>
+        <ul class="text-left bullets">
+          <li ng-repeat="bullet in benefit.bullets">{{bullet}}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 text-center blurb" ng-repeat="benefit in benefitRowTwo track by $index">
+        <img src="{{benefit.image}}">
+        <h3>{{benefit.title}}</h3>
+        <hr/>
+        <ul class="text-left bullets">
+          <li ng-repeat="bullet in benefit.bullets">{{bullet}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="footer">
+  <div class="container">
+
   </div>
 </section>
