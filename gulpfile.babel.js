@@ -4,6 +4,7 @@ import sass from 'gulp-sass';
 import concat from 'gulp-concat';
 import uglify from 'gulp-uglify';
 import rename from 'gulp-rename';
+import babel from 'gulp-babel';
 
 const dir = {
   in: {
@@ -40,6 +41,9 @@ gulp.task('sass', () => {
 
 gulp.task('scripts', () => {
   return gulp.src(dir.in.js)
+    .pipe(babel({
+  			presets: ['es2015']
+  	}))
     .pipe(concat('all.js'))
     .pipe(gulp.dest(dir.out.js))
 });
