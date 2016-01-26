@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "babel-node ./bin/www",
     "postinstall": "bower install && gulp deploy",
-    "setup": "rm -rf node_modules src/bower_components && bower install && npm install"
+    "setup": "rm -rf node_modules src/bower_components && npm install && bower install"
   },
   "dependencies": {
     "babel": "^6.3.26",
