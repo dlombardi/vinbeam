@@ -57,4 +57,4 @@ gulp.task('watch', () => {
 
 gulp.task('default', ['bower', 'html', 'sass', 'scripts', 'assets', 'watch']);
 
-gulp.task('deploy', ['html', 'sass', 'scripts', 'assets']);
+gulp.task('deploy', ['bower', 'html', 'sass', 'scripts', 'assets']);
