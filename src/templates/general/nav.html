@@ -15,6 +15,7 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav nav-links nav-left">
+          <li><a ng-hide="main" class="nav-scroll" ui-sref="main" >Main</a></li>
           <li><a ng-hide="!main" class="nav-scroll" href="#" ng-click="scrollTo($event)">What</a></li>
           <li><a ng-hide="!main" class="nav-scroll" href="#" ng-click="scrollTo($event)">How</a></li>
           <li><a ng-hide="!main" class="nav-scroll" href="#" ng-click="scrollTo($event)">Why</a></li>
@@ -23,7 +24,7 @@
           <li><a class="nav-page divider-left" ui-sref="about" ui-sref-active="active">About Us</a></li>
           <li><a class="nav-page divider-right" ui-sref="contact" ui-sref-active="active">Contact Us</a></li>
         </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
+      </div>
+    </div>
   </nav>
 </div>
