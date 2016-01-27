@@ -1,0 +1,82 @@
+.blurb-image{
+  position: relative;
+  // border: 1px solid red;
+  height: 100px;
+  width: 100%;
+}
+
+.blurb-title{
+  position: relative;
+  // border: 1px solid red;
+  height: 25px;
+  width: 100%;
+
+}
+
+.blurb-description{
+  position: relative;
+  // border: 1px solid red;
+  height: 120px;
+  width: 100%;
+
+}
+
+.blurb-bullets{
+  // border: 1px solid red;
+  padding-top: -30px;
+  position: relative;
+  height: 250px;
+  width: 100%;
+}
+
+.bullets{
+  position:relative;
+  height: 200px;
+  border-radius: 5px;
+  background-color: $vinbeam-green;
+  margin-top: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  font-size: 15px;
+  color: white;
+  @include box-shadow-small($box-shadow-grey)
+}
+
+@media (max-width: 1185px){
+  .blurb-description{
+    height: 60px;
+  }
+  .blurb-bullets{
+    .bullets{
+      font-size: 18px;
+      height: 220px;
+    }
+  }
+}
+
+@media (max-width: 970px){
+  .blurb-description{
+    height: 40px;
+
+  }
+  .blurb-bullets{
+    .bullets{
+      font-size: 20px;
+      height: 160px;
+    }
+  }
+}
+
+@media (max-width: 600px){
+  .blurb-description{
+    height: 60px;
+
+  }
+  .blurb-bullets{
+    .bullets{
+      font-size: 20px;
+      height: 245px;
+    }
+  }
+}

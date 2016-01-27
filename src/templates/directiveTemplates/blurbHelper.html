@@ -1,11 +1,19 @@
 <div class="row">
   <div class="{{vm.lgCol}} {{vm.mdCol}} col-xs-12 text-center blurb" ng-repeat="blurb in vm.blurbs track by $index">
-    <img src="{{blurb.image}}">
-    <h3>{{blurb.title}}</h3>
+    <div class="blurb-image">
+      <img src="{{blurb.image}}">
+    </div>
+    <div class="blurb-title">
+      <h3>{{blurb.title}}</h3>
+    </div>
     <hr/>
-    <p >{{blurb.description}}</p>
-    <ul class="text-left bullets">
-      <li ng-repeat="bullet in blurb.bullets">{{bullet}}</li>
-    </ul>
+    <div ng-if="blurb.description" class="blurb-description">
+      <p>{{blurb.description}}</p>
+    </div>
+    <div class="blurb-bullets">
+      <ul class="text-left bullets">
+        <li ng-repeat="bullet in blurb.bullets">{{bullet}}</li>
+      </ul>
+    </div>
   </div>
 </div>
