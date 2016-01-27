@@ -70,13 +70,17 @@
 
 @media (max-width: 600px){
   .blurb-description{
-    height: 60px;
+    height: 80px;
 
   }
   .blurb-bullets{
     .bullets{
       font-size: 20px;
-      height: 245px;
+      height: 265px;
     }
+  }
+  .blurb-image{
+    padding-top: 20px;
+    height: 125px;
   }
 }
