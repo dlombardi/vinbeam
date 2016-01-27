@@ -7,5 +7,6 @@ app.controller('NavController', ['$scope', '$window', '$timeout' , function($sco
     $scope.$on("insideMain", () => $scope.main = true);
 
     $scope.scrollTo = (event) => $scope.$emit("toSection", event.target.innerHTML.toLowerCase());
+    $scope.scrollToTop = () => $scope.$emit('toTop');
 
 }])

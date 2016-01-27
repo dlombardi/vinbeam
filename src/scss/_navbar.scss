@@ -1,13 +1,18 @@
 .navbar-custom{
-  background-color: $primary-dark;
+  background-color: $primary-medium;
   @include box-shadow-small($box-shadow-grey)
-  border-bottom: 4px solid $primary-medium;
+  border-bottom: 4px solid $primary-light;
 
 
 
   .navbar-brand{
     color: white;
     font-size: 40px;
+    span img{
+      margin-top: -5px;
+      height: 25px;
+      width: 125px;
+    }
   }
 
   button.navbar-toggle{
@@ -21,7 +26,7 @@
     li a {
       color: $vinbeam-grey;
       position: relative;
-      background-color: $primary-dark;
+      background-color: $primary-medium;
       font-family: $open_sans;
     }
     li a:hover{
@@ -43,7 +48,7 @@
       padding-right: 20px;
     }
     .nav-page{
-      background-color: $primary-dark;
+      background-color: $primary-medium;
       border: none;
       font: 15px;
     }
@@ -75,3 +80,18 @@
 .active{
   background-color: $primary-color;
 }
+
+@media only screen and (max-device-width: 420px) {
+  .navbar-collapse.collapse {
+        display: none !important;
+    }
+    .navbar-collapse.collapse.in {
+        display: block !important;
+    }
+    .navbar-header .collapse, .navbar-toggle {
+        display:block !important;
+    }
+    .navbar-header {
+        float:none;
+    }
+	}

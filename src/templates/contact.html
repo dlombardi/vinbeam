@@ -1,37 +1,61 @@
-<section id="contact-form">
+<section id="contact">
   <div class='container'>
-    <div class='sent' ng-class="{ 'hidden': !submit }">
-      <h1>
-        Message sent!
-      </h1>
-    </div>
-    <form name='contactForm' ng-class="{ 'hidden': submit }">
-      <fieldset>
-        <legend>Contact Us!</legend>
-        <label for='email' ng-class="{'required':contactForm.email.$error.required,'invalid':contactForm.email.$error.email,'ok':contactForm.email.$valid}">
-          <span class='no-placeholder'>
-            Email
-          </span>
-          <input id='email' name='email' ng-model='email' placeholder='Email' required type='email'>
-        </label>
-        <label for='subject' ng-class="{'required':contactForm.subject.$error.required,'ok':contactForm.subject.$valid}">
-          <span class='no-placeholder'>
-            Subject
-          </span>
-          <input id='subject' name='subject' ng-model='subject' placeholder='Subject' required type='text'>
-        </label>
-        <label for='message' ng-class="{'required':contactForm.message.$error.required,'ok':contactForm.message.$valid}">
-          <span class='no-placeholder'>
-            Message
-          </span>
-          <textarea name='message' ng-model='message' placeholder='Message' rows="10" cols="50" required></textarea>
-        </label>
-      </fieldset>
-      <div class='form-controls'>
-        <button class='btn btn-send' ng-click='submit = !submit' ng-disabled='contactForm.$invalid' type='submit'>
-          Send
-        </button>
+    <div class="row">
+      <div class="col-lg-2">
+        <div class="about-header">
+          <h1>MISSION</h1>
+        </div>
       </div>
-    </form>
+      <div class="col-lg-6 col-lg-pull-4">
+        Helloasdfas
+      </div>
+    </div>
+    <hr/>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="about-header">
+          <h1>Story</h1>
+        </div>
+      </div>
+      <div class="col-lg-6">
+
+      </div>
+    </div>
+    <hr/>
+    <div class="row">
+      <div class='sent' ng-class="{ 'hidden': !submit }">
+        <h1>
+          Message sent!
+        </h1>
+      </div>
+      <form name='contactForm' ng-class="{ 'hidden': submit }">
+        <fieldset>
+          <legend>Drop us a Message!</legend>
+          <label for='email' ng-class="{'required':contactForm.email.$error.required,'invalid':contactForm.email.$error.email,'ok':contactForm.email.$valid}">
+            <span class='no-placeholder'>
+              Email
+            </span>
+            <input id='email' name='email' ng-model='email' placeholder='Your Email' required type='email'>
+          </label>
+          <label for='subject' ng-class="{'required':contactForm.subject.$error.required,'ok':contactForm.subject.$valid}">
+            <span class='no-placeholder'>
+              Subject
+            </span>
+            <input id='subject' name='subject' ng-model='subject' placeholder='Subject' required type='text'>
+          </label>
+          <label for='message' ng-class="{'required':contactForm.message.$error.required,'ok':contactForm.message.$valid}">
+            <span class='no-placeholder'>
+              Message
+            </span>
+            <textarea name='message' ng-model='message' placeholder='Message' rows="10" cols="50" required></textarea>
+          </label>
+        </fieldset>
+        <div class='form-controls'>
+          <button class='btn btn-send' ng-click='submit = !submit' ng-disabled='contactForm.$invalid' type='submit'>
+            Send
+          </button>
+        </div>
+      </form>
+    </div>
   </div>
 </section>

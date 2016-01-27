@@ -3,6 +3,15 @@
   // border: 1px solid red;
   height: 100px;
   width: 100%;
+  img{
+    transition: height 0.2s ease, width 0.2s ease;
+    height: 100px;
+    width: 100px;
+  }
+  img:hover{
+    height: 120px;
+    width: 120px;
+  }
 }
 
 .blurb-title{
@@ -18,69 +27,104 @@
   // border: 1px solid red;
   height: 120px;
   width: 100%;
-
 }
 
 .blurb-bullets{
   // border: 1px solid red;
-  padding-top: -30px;
+  margin-top: 10px;
+  background-color: $vinbeam-green;
+  padding: 20px 10px 10px 0px;
   position: relative;
-  height: 250px;
   width: 100%;
+  height: 210px;
+  border-radius: 5px;
+  @include box-shadow-small($box-shadow-grey)
+  margin-bottom: 50px;
 }
 
 .bullets{
   position:relative;
-  height: 200px;
-  border-radius: 5px;
-  background-color: $vinbeam-green;
-  margin-top: 30px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-right: 10px;
   font-size: 15px;
   color: white;
-  @include box-shadow-small($box-shadow-grey)
 }
+
+//responsive media queries
 
 @media (max-width: 1185px){
   .blurb-description{
-    height: 60px;
+    height: 80px;
   }
   .blurb-bullets{
+    height: 220px;
     .bullets{
       font-size: 18px;
-      height: 220px;
     }
   }
 }
 
 @media (max-width: 970px){
   .blurb-description{
-    height: 40px;
+    height: 50px;
 
   }
   .blurb-bullets{
+    height: 160px;
     .bullets{
       font-size: 20px;
-      height: 160px;
     }
   }
 }
 
 @media (max-width: 600px){
   .blurb-description{
-    height: 80px;
+    height: 100px;
 
   }
   .blurb-bullets{
+    height: 265px;
     .bullets{
       font-size: 20px;
-      height: 265px;
     }
   }
   .blurb-image{
     padding-top: 20px;
     height: 125px;
+  }
+}
+
+@media (max-width: 325px){
+  .blurb-description{
+    height: 80px;
+
+  }
+  .blurb-bullets{
+    height: 265px;
+    .bullets{
+      font-size: 30px;
+    }
+  }
+  .blurb-image{
+    padding-top: 20px;
+    height: 105px;
+  }
+}
+
+@media only screen and (max-device-width: 420px) {
+  .blurb-title{
+    height: 40px;
+    h3{
+      font-size: 45px;
+    }
+  }
+  .blurb-description{
+    height: 130px;
+    p{
+      font-size: 35px;
+    }
+  }
+  .blurb-bullets{
+    .bullets{
+      font-size: 30px;
+    }
   }
 }

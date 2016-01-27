@@ -6,8 +6,9 @@ $sans:   "Raleway", sans-serif;
 $formBG: $vinbeam-grey;
 $legendBG: $primary-color;
 
-#contact-form{
+#contact{
   margin-top: 150px;
+  margin-bottom: 100px;
 }
 
 form {
@@ -151,4 +152,8 @@ label {
 .no-placeholder {
   display:none;
   .ie-lt9 & {display:block;}
+}
+
+.about-header{
+  
 }

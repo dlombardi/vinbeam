@@ -1,0 +1,25 @@
+
+#footer{
+  height: 100px;
+  width: 100%;
+  border-top: 5px solid $primary-light;
+  background-color: $primary-medium;
+}
+
+.social-icons{
+  margin-top: 25px;
+  i{
+    color: $vinbeam-grey;
+    transition: color .5s ease;
+    margin-right: 20px;
+  }
+  i:hover{
+    color: white;
+  }
+}
+
+.lisence{
+  float: right;
+  color: white;
+  margin-top: 35px;
+}
