@@ -155,5 +155,23 @@ label {
 }
 
 .about-header{
-  
+  h1{
+    color: $vinbeam-darker-grey;
+    font-size: 40px;
+    font-style: italic;
+  }
+}
+
+.about-body{
+  h3{
+    color: $vinbeam-dark-grey;
+  }
+}
+
+.contact-title{
+  margin-bottom: 100px;
+  h1{
+    font-size: 60px;
+    color: $primary-color;
+  }
 }
