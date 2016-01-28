@@ -5,7 +5,7 @@ app.controller('MainController', ['$scope', '$window', '$timeout', '$document', 
     {
       title: "Inventory Management",
       image: '../../assets/images/car_rental.png',
-      description: 'Proprietary module plugged into the ODB-II port delivers data and location with Near zero battery drain, and pin-point accuracy.',
+      description: 'Proprietary module plugged into the ODB-II port delivers data and location with near zero battery drain, and pin-point accuracy.',
       bullets: [
         "Perform complete Inventory reconciliation without leaving your desk",
         "Deliver bank audits without the need for a physical count",
@@ -18,9 +18,9 @@ app.controller('MainController', ['$scope', '$window', '$timeout', '$document', 
       description: 'Know when a vehicle is accessed without authorization and know its location 24/7',
       bullets: [
         "Without the key in the vehicle",
-        "you know the second a door is opened",
+        "You know the second a door is opened",
         "Customize the alert times and who gets them - including security",
-        "Surrounding vehicles are aware of what is happening to the other around it"
+        "Surrounding vehicles are aware of what is happening to the others around it"
       ]
     },
     {
@@ -53,10 +53,10 @@ app.controller('MainController', ['$scope', '$window', '$timeout', '$document', 
       image: '../../assets/images/module.png',
       bullets: [
         "Plugs into ODB-II Port in the vehicle",
-        "Near Zero battery use",
-        "Reports Location & Statistics",
-        "Proprietary Network - all vehicles work together",
-        "Communicate to the Gateway"
+        "Near zero battery useage",
+        "Reports location & statistics",
+        "Proprietary network - all vehicles work together",
+        "Communicate to the gateway"
       ]
     },
     {
@@ -73,7 +73,7 @@ app.controller('MainController', ['$scope', '$window', '$timeout', '$document', 
       title: "Vehicle Data Access",
       image: '../../assets/images/cloud_storage.png',
       bullets: [
-        "Access from any web browswer",
+        "Access from any web browser",
         "Admin controls for Users and data",
         "Data stores of ALL data from vehicles",
         "Sortable reports on vehicle location and data"
@@ -86,9 +86,9 @@ app.controller('MainController', ['$scope', '$window', '$timeout', '$document', 
       title: "Easy Access & Set-up",
       image: '../../assets/images/easy_setup.png',
       bullets: [
-        "Access through any Web browswer for Admin",
-        "iOS and Android support mobile",
-        "One Touch Vehicle On-boarding",
+        "Access through any web browser for Admin",
+        "iOS and Android support for mobile",
+        "One touch vehicle on-boarding",
         "Easy reporting on all devices",
       ]
     },
@@ -99,7 +99,7 @@ app.controller('MainController', ['$scope', '$window', '$timeout', '$document', 
         "No more lengthy inventory audits",
         "No vehicles missing, on or off the lot",
         "Move stagnant inventory to sales positions",
-        "Additional early wanring security from the vehicle"
+        "Additional early warning security from the vehicle"
       ]
     },
   ];
@@ -110,8 +110,8 @@ app.controller('MainController', ['$scope', '$window', '$timeout', '$document', 
       image: '../../assets/images/one_finger.png',
       bullets: [
         "Salesman have a \"My Inventory\" for current deals",
-        "What cars are being shown to who, by who",
-        "Reconcile Inventory for Bank Audits by location",
+        "What cars are being shown to who, and by who",
+        "Reconcile inventory for bank audits by location",
         "Cars needing a charge/gas without going to the vehicle"
       ]
     },
@@ -120,7 +120,7 @@ app.controller('MainController', ['$scope', '$window', '$timeout', '$document', 
       image: '../../assets/images/security_checked.png',
       bullets: [
         "24 hour monitoring",
-        "INSTANT Notification to one or many",
+        "INSTANT notifications to one or many",
         "Without the vehicle being turned on",
         "All the vehicles work together to monitor"
       ]
