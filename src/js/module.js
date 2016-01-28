@@ -1,6 +1,6 @@
 'use strict';
 
-let app = angular.module('vinbeam', ['ui.router', 'ngAnimate', 'ui.bootstrap', 'duScroll']);
+let app = angular.module('vinbeam', ['ui.router', 'ngAnimate', 'duScroll']);
 
 app.run(($rootScope, $state) => {
   $rootScope.$on('notMain', () => $rootScope.$broadcast("notInMain"));

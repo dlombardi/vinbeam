@@ -25,7 +25,7 @@
 .blurb-description{
   position: relative;
   // border: 1px solid red;
-  height: 120px;
+  height: 80px;
   width: 100%;
 }
 
@@ -52,7 +52,10 @@
 
 @media (max-width: 1185px){
   .blurb-description{
-    height: 80px;
+    height: 100px;
+    p{
+      font-size: 20px;
+    }
   }
   .blurb-bullets{
     height: 220px;
@@ -65,7 +68,6 @@
 @media (max-width: 970px){
   .blurb-description{
     height: 50px;
-
   }
   .blurb-bullets{
     height: 160px;
@@ -77,11 +79,13 @@
 
 @media (max-width: 600px){
   .blurb-description{
-    height: 100px;
-
+    height: 110px;
+    p{
+      font-size: 20px;
+    }
   }
   .blurb-bullets{
-    height: 265px;
+    height: 280px;
     .bullets{
       font-size: 20px;
     }
@@ -89,42 +93,5 @@
   .blurb-image{
     padding-top: 20px;
     height: 125px;
-  }
-}
-
-@media (max-width: 325px){
-  .blurb-description{
-    height: 80px;
-
-  }
-  .blurb-bullets{
-    height: 265px;
-    .bullets{
-      font-size: 30px;
-    }
-  }
-  .blurb-image{
-    padding-top: 20px;
-    height: 105px;
-  }
-}
-
-@media only screen and (max-device-width: 420px) {
-  .blurb-title{
-    height: 40px;
-    h3{
-      font-size: 45px;
-    }
-  }
-  .blurb-description{
-    height: 130px;
-    p{
-      font-size: 35px;
-    }
-  }
-  .blurb-bullets{
-    .bullets{
-      font-size: 30px;
-    }
   }
 }
