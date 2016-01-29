@@ -6,4 +6,9 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'VINBeam' });
 });
 
+router.post('/email', function(req, res, next){
+  console.log('test');
+   res.end();
+});
+
 module.exports = router;

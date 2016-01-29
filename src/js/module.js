@@ -15,7 +15,7 @@ $locationProvider.html5Mode(true).hashPrefix('!');
 
 $stateProvider
   .state('main', { url: '/', templateUrl: '/html/main.html', controller: 'MainController' })
-  .state('contact', { url: '/contact', templateUrl: '/html/contact.html', controller: 'ContactController' })
+  .state('about', { url: '/about', templateUrl: '/html/about.html', controller: 'AboutController' })
 
   $urlRouterProvider.otherwise('/');
 }]);

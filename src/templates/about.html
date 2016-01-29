@@ -1,3 +1,81 @@
-<div>
-
-</div>
+<section id="contact">
+  <div class='container'>
+    <div class="row">
+      <div class="col-lg-12 text-center contact-title">
+        <h1>ABOUT US</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="about-header text-center">
+          <h1>MISSION </h1>
+        </div>
+      </div>
+      <div class="col-lg-8 about-body">
+        <h3>To deliver high-quality solutions and customer satisfaction to the automotive industry and address the challenges of inventory location, audit, security, and sales management.</h3>
+        <br/>
+        <h3>To do this with easy to use, and easy to install technology that works flawlessly at a reasonable cost without impacting the margin of the vehicles, while improving the efficiency of the sales team during the deal process.</h3>
+      </div>
+    </div>
+    <hr/>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="about-header text-center">
+          <h1>STORY</h1>
+        </div>
+      </div>
+      <div class="col-lg-8 about-body">
+          <h3>Our President set on the road to figure out the easiest, most cost effective, way to ease Floorplan audits for dealerships without physical, human interaction.</h3>
+          <br/>
+          <h3>A mutual friend had explained the process of the audits and felt there had to be a way to solve the problem with technology.</h3>
+          <br/>
+          <h3>Dealerships have to reconcile the bank’s reports from their own by touching every car to verify the Vehicle Identification Number (VIN).</h3>
+          <br/>
+          <h3>Cars were often not where they were supposed to be, on a test drive, and in a few cases actually completely missing.</h3>
+          <br/>
+          <h3>Leveraging 35 years of experience in high tech, Mario quickly determined the key to resolving the problem would be low, non-intrusive cost to the vehicle, and simple to install and use. Leverage the OBD-II port of the vehicles and combining it with his patented solution opened the door to much more functionality and made VINBeam what it is today.</h3>
+      </div>
+    </div>
+    <hr/>
+    <div class="row">
+      <div class="col-lg-12 text-center contact-title">
+        <h1>CONTACT US</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class='sent' ng-class="{ 'hidden': !submit }">
+        <h1>
+          Message sent!
+        </h1>
+      </div>
+      <form ng-submit="submitEmail()" name='contactForm' ng-class="{ 'hidden': submit }">
+        <fieldset>
+          <legend>Drop us a Message!</legend>
+          <label for='email' ng-class="{'required':contactForm.email.$error.required,'invalid':contactForm.email.$error.email,'ok':contactForm.email.$valid}">
+            <span class='no-placeholder'>
+              Email
+            </span>
+            <input id='email' name='email' ng-model='email.address' placeholder='Your Email' required type='email'>
+          </label>
+          <label for='subject' ng-class="{'required':contactForm.subject.$error.required,'ok':contactForm.subject.$valid}">
+            <span class='no-placeholder'>
+              Subject
+            </span>
+            <input id='subject' name='subject' ng-model='email.subject' placeholder='Subject' required type='text'>
+          </label>
+          <label for='message' ng-class="{'required':contactForm.message.$error.required,'ok':contactForm.message.$valid}">
+            <span class='no-placeholder'>
+              Message
+            </span>
+            <textarea name='message' ng-model='email.message' placeholder='Message' rows="10" cols="50" required></textarea>
+          </label>
+        </fieldset>
+        <div class='form-controls'>
+          <button class='btn btn-send' ng-click='submit = !submit' ng-disabled='contactForm.$invalid' type='submit'>
+            Send
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
