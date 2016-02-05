@@ -21,6 +21,7 @@
     "angular-ui-router": "~0.2.15",
     "bootstrap": "~3.3.6",
     "angular-animate": "~1.4.9",
-    "angular-scroll": "~1.0.0"
+    "angular-scroll": "~1.0.0",
+    "lodash": "^4.2.1"
   }
 }

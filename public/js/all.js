@@ -27,6 +27,64 @@ app.config(["$stateProvider", "$locationProvider", "$urlRouterProvider", functio
 }]);
 'use strict';
 
+var blurbHelper = function blurbHelper() {
+  var controller = ["$scope", function ($scope) {
+    var vm = this;
+
+    vm.blurbs = [];
+    vm.lgCol = 'col-lg-' + vm.lgColumns;
+    vm.mdCol = 'col-md-' + vm.mdColumns;
+
+    for (var prop in vm.datasource) {
+      vm.blurbs.push(vm.datasource[prop]);
+    }
+  }];
+
+  return {
+    restrict: 'E',
+    replace: true,
+    scope: {
+      datasource: '=',
+      lgColumns: '@',
+      mdColumns: '@'
+    },
+    controller: controller,
+    controllerAs: 'vm',
+    bindToController: true,
+    templateUrl: '../html/directiveTemplates/blurbHelper.html'
+  };
+};
+
+app.directive('blurbHelper', blurbHelper);
+'use strict';
+
+var sectionHeader = function sectionHeader() {
+  var controller = ["$scope", function ($scope) {
+    var header = this;
+
+    header.class = header.section + '-header';
+    header.bigTitle = header.title.toUpperCase();
+    header.subtitle = header.subtitle;
+  }];
+
+  return {
+    restrict: 'E',
+    replace: true,
+    scope: {
+      section: '@',
+      title: '@',
+      subtitle: '@'
+    },
+    controller: controller,
+    controllerAs: 'header',
+    bindToController: true,
+    templateUrl: '../html/directiveTemplates/headerTemplate.html'
+  };
+};
+
+app.directive('sectionHeader', sectionHeader);
+'use strict';
+
 app.controller('AboutController', ['$scope', '$window', '$rootScope', '$http', function ($scope, $window, $rootScope, $http) {
   $scope.submitEmail = function () {
     $http.post('email', $scope.email).success(function (email) {
@@ -104,78 +162,34 @@ app.controller('MainController', ['$scope', '$window', '$timeout', '$document', 
 }]);
 'use strict';
 
-app.controller('NavController', ['$scope', '$window', '$timeout', function ($scope, $window, $timeout) {
-    $scope.main = true;
+app.controller('NavController', ['$scope', '$window', '$timeout', '$log', function ($scope, $window, $timeout, $log) {
+  $scope.main = true;
 
-    $scope.$on("notInMain", function () {
-        return $scope.main = false;
-    });
-    $scope.$on("insideMain", function () {
-        return $scope.main = true;
-    });
+  $scope.$on("notInMain", function () {
+    return $scope.main = false;
+  });
+  $scope.$on("insideMain", function () {
+    return $scope.main = true;
+  });
 
-    $scope.scrollTo = function (event) {
-        return $scope.$emit("toSection", event.target.innerHTML.toLowerCase());
-    };
-    $scope.scrollToTop = function () {
-        return $scope.$emit('toTop');
-    };
-}]);
-'use strict';
+  $scope.scrollTo = function (event) {
+    return $scope.$emit("toSection", event.target.innerHTML.toLowerCase());
+  };
+  $scope.scrollToTop = function () {
+    return $scope.$emit('toTop');
+  };
 
-var blurbHelper = function blurbHelper() {
-  var controller = ["$scope", function ($scope) {
-    var vm = this;
-
-    vm.blurbs = [];
-    vm.lgCol = 'col-lg-' + vm.lgColumns;
-    vm.mdCol = 'col-md-' + vm.mdColumns;
-
-    for (var prop in vm.datasource) {
-      vm.blurbs.push(vm.datasource[prop]);
+  var updateCollapsable = _.debounce(function (e) {
+    $log.info(window.innerWidth);
+    if (window.innerWidth <= 767) {
+      $('.nav-elem').attr({
+        'data-toggle': 'collapse',
+        'data-target': '#navigationBar'
+      });
+    } else {
+      $('.nav-elem').removeAttr('data-toggle data-target');
     }
-  }];
+  }, 1000);
 
-  return {
-    restrict: 'E',
-    replace: true,
-    scope: {
-      datasource: '=',
-      lgColumns: '@',
-      mdColumns: '@'
-    },
-    controller: controller,
-    controllerAs: 'vm',
-    bindToController: true,
-    templateUrl: '../html/directiveTemplates/blurbHelper.html'
-  };
-};
-
-app.directive('blurbHelper', blurbHelper);
-'use strict';
-
-var sectionHeader = function sectionHeader() {
-  var controller = ["$scope", function ($scope) {
-    var header = this;
-
-    header.class = header.section + '-header';
-    header.bigTitle = header.title.toUpperCase();
-    header.subtitle = header.subtitle;
-  }];
-
-  return {
-    restrict: 'E',
-    replace: true,
-    scope: {
-      section: '@',
-      title: '@',
-      subtitle: '@'
-    },
-    controller: controller,
-    controllerAs: 'header',
-    bindToController: true,
-    templateUrl: '../html/directiveTemplates/headerTemplate.html'
-  };
-};
-
-app.directive('sectionHeader', sectionHeader);
+  window.addEventListener("resize", updateCollapsable, false);
+}]);
