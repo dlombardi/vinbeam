@@ -16,15 +16,15 @@
       <div class="collapse navbar-collapse" id="navigationBar">
         <ul class="nav navbar-nav nav-links nav-left">
           <li><a ng-hide="main" class="nav-scroll nav-elem" ui-sref="main">Main</a></li>
-          <li><a ng-hide="!main" class="nav-scroll nav-elem" href="#" ng-click="scrollTo($event)">What</a></li>
-          <li><a ng-hide="!main" class="nav-scroll nav-elem" href="#" ng-click="scrollTo($event)">How</a></li>
-          <li><a ng-hide="!main" class="nav-scroll nav-elem" href="#" ng-click="scrollTo($event)">Why</a></li>
+          <li><a ng-hide="!main" class="nav-scroll nav-elem" href="#" ng-click="scrollTo($event)" data-target="#navigationBar" data-toggle="collapse">What</a></li>
+          <li><a ng-hide="!main" class="nav-scroll nav-elem" href="#" ng-click="scrollTo($event)" data-target="#navigationBar" data-toggle="collapse">How</a></li>
+          <li><a ng-hide="!main" class="nav-scroll nav-elem" href="#" ng-click="scrollTo($event)" data-target="#navigationBar" data-toggle="collapse">Why</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right nav-links">
-          <li><a class="nav-page nav-elem divider-right" ui-sref="about" ui-sref-active="active">About Us</a></li>
+          <li><a class="nav-page nav-elem divider-right" ui-sref="about" data-target="#navigationBar" data-toggle="collapse" ui-sref-active="active">About Us</a></li>
           <li><a href="https://www.facebook.com/VINBEAMC/" target="_blank" data-target="#navigationBar" data-toggle="collapse"><i class="fa fa-facebook fa-1x"></i></a></li>
           <li><a href="https://twitter.com/VINBeamc" target="_blank" data-target="#navigationBar" data-toggle="collapse"><i class="fa fa-twitter fa-1x"></i></a></li>
-          <li><a href="https://www.linkedin.com/company/vinbeam?trk=company_logo" target="_blank" data-target="#navigationBar" data-toggle="collapse"><i class="fa fa-linkedin fa-1x"></i></a></li>
+          <li><a href="https://www.linkedin.com/company/vinbeam?trk=company_logo" target="_blank" data-target="#navigationBar" data-toggle="collapse" ><i class="fa fa-linkedin fa-1x"></i></a></li>
           <li><a href="https://angel.co/vinbeam-3#" target="_blank" data-target="#navigationBar" data-toggle="collapse"><i class="fa fa-angellist fa-1x"></i></a></li>
         </ul>
       </div>
