@@ -87,8 +87,15 @@ app.directive('sectionHeader', sectionHeader);
 
 app.controller('AboutController', ['$scope', '$window', '$rootScope', '$http', function ($scope, $window, $rootScope, $http) {
   $scope.submitEmail = function () {
-    $http.post('email', $scope.email).success(function (email){
-      console.log(email);
+    $http.post('email', $scope.email).success(function (res){
+      if(res.status === 200){
+        swal({title: "Success!",   text: "Message Sent",  timer: 1000,   showConfirmButton: false, type: "success" });
+        $scope.email = {
+          address: "",
+          subject: "",
+          message: ""
+        }
+      }
     });
   };
   $scope.$emit("notMain");

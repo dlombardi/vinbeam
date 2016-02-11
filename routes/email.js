@@ -14,7 +14,7 @@ router.post('/', function(req, res, next){
   };
   //
   mailgun.messages().send(data, function (error, body) {
-    res.send(body);
+    res.send({status: 200});
   });
 });
 

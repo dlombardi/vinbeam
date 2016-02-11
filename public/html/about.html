@@ -43,13 +43,8 @@
       </div>
     </div>
     <div class="row">
-      <div class='sent' ng-class="{ 'hidden': !submit }">
-        <h1>
-          Message sent!
-        </h1>
-      </div>
-      <form ng-submit="submitEmail()" name='contactForm' ng-class="{ 'hidden': submit }">
-        <fieldset>
+      <form ng-submit="submitEmail()" name='contactForm'>
+        <fieldset id="contact-fieldset">
           <legend>Drop us a Message!</legend>
           <label for='email' ng-class="{'required':contactForm.email.$error.required,'invalid':contactForm.email.$error.email,'ok':contactForm.email.$valid}">
             <span class='no-placeholder'>
