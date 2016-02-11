@@ -87,8 +87,8 @@ app.directive('sectionHeader', sectionHeader);
 
 app.controller('AboutController', ['$scope', '$window', '$rootScope', '$http', function ($scope, $window, $rootScope, $http) {
   $scope.submitEmail = function () {
-    $http.post('email', $scope.email).success(function (email) {
-      return console.log(email);
+    $http.post('email', $scope.email).success(function (email){
+      console.log(email);
     });
   };
   $scope.$emit("notMain");

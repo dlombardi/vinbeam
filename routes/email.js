@@ -1,21 +1,21 @@
 var express = require('express');
 var router = express.Router();
 
+var api_key = process.env.MAILGUN_API_KEY;
+var mailgun = require('mailgun-js')({apiKey: api_key, domain: "mg.vinbeam.com"});
+
+
 router.post('/', function(req, res, next){
-  res.send(req.body)
-  // mailgun.sendText(
-  //   req.body.email,
-  //   'darien.lombardi@gmail.com',
-  //   $scope.subject,
-  //   $scope.message,
-  //   function(err){
-  //     if(err){
-  //       res.send(res.status('400'))
-  //     } else {
-  //       res.send(res.status('200') + ' success!');
-  //     }
-  //   }
-  // )
+  var data = {
+    from: req.body.address,
+    to: 'info@vinbeam.com',
+    subject: req.body.subject,
+    text: req.body.message
+  };
+  //
+  mailgun.messages().send(data, function (error, body) {
+    res.send(body);
+  });
 });
 
 module.exports = router;
