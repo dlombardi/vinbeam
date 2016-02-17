@@ -2,10 +2,12 @@
 
 var app = angular.module('vinbeam', ['ui.router', 'ngAnimate', 'duScroll']);
 
-app.run(function ($rootScope, $state) {
+app.run(["$rootScope", "$state", function ($rootScope, $state) {
+
   $rootScope.$on('notMain', function () {
     return $rootScope.$broadcast("notInMain");
   });
+
   $rootScope.$on('inMain', function () {
     return $rootScope.$broadcast("insideMain");
   });
@@ -13,15 +15,19 @@ app.run(function ($rootScope, $state) {
   $rootScope.$on('toSection', function (err, section) {
     return $rootScope.$broadcast('goToSection', section);
   });
+
   $rootScope.$on('toTop', function () {
     return $rootScope.$broadcast('goToSection', "vinbeam");
   });
-});
+
+}]);
 
 app.config(["$stateProvider", "$locationProvider", "$urlRouterProvider", function ($stateProvider, $locationProvider, $urlRouterProvider) {
   $locationProvider.html5Mode(true).hashPrefix('!');
 
-  $stateProvider.state('main', { url: '/', templateUrl: '/html/main.html', controller: 'MainController' }).state('about', { url: '/about', templateUrl: '/html/about.html', controller: 'AboutController' });
+  $stateProvider
+  .state('main', { url: '/', templateUrl: '/html/main.html', controller: 'MainController' })
+  .state('about', { url: '/about', templateUrl: '/html/about.html', controller: 'AboutController' });
 
   $urlRouterProvider.otherwise('/');
 }]);
@@ -171,6 +177,7 @@ app.controller('MainController', ['$scope', '$window', '$timeout', '$document', 
 
 app.controller('NavController', ['$scope', '$window', '$timeout', '$log', function ($scope, $window, $timeout, $log) {
   $scope.main = true;
+  $('.nav-elem').removeAttr('data-toggle data-target');
 
   $scope.$on("notInMain", function () {
     return $scope.main = false;
